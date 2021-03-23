@@ -33,15 +33,9 @@ modalCart.addEventListener("click", event => {
 
 // Scroll smooth
 const scrollLinks = document.querySelectorAll("a.scroll-link");
-for (i = 0; i < scrollLinks.length; i++) {
-  console.log(scrollLinks[i]);
-  console.log(scrollLinks[i].getAttribute("href"));
-}
-
 scrollLinks.forEach(link => {
   link.addEventListener("click", event => {
     event.preventDefault();
-    // const target = event.target;
     const id = link.getAttribute("href");
     document.querySelector(id).scrollIntoView({
       block: "start",
@@ -49,4 +43,3 @@ scrollLinks.forEach(link => {
     });
   });
 });
-// console.log(topLinks);
